@@ -1,9 +1,9 @@
 requirejs.config({
     paths: {
         lodash: '../vendor/lodash',
-        react: '../vendor/react',
+        React: '../vendor/react',
         reactDOM: '../vendor/react-dom',
-        router: 'https://cdnjs.cloudflare.com/ajax/libs/react-router/2.0.0/ReactRouter'
+        reactRoute: 'https://cdnjs.cloudflare.com/ajax/libs/react-router/2.0.0/ReactRouter'
     },
     map: {
         '*': {
@@ -21,10 +21,21 @@ requirejs.config({
     }
 });
 
-requirejs(['lodash', 'react', 'reactDOM', 'components/MainView'],
-    function (_, React, ReactDOM, MainView) {
+requirejs(['lodash', 'React', 'reactDom', 'reactRoute', 'components/Login/Login', 'components/Login/Signup'],
+    function (_, React, ReactDOM, ReactRouter, Login, Signup) {
         'use strict';
+
+        var Router = ReactRouter.Router;
+        var Route = ReactRouter.Route;
+
         var mountPoint = document.getElementById('app');
-        ReactDOM.render(<MainView />, mountPoint);
+        var routes = (
+            <Router>
+                <Route path="/" component={Login}/>
+                <Route path="/signup" component={Signup}/>
+            </Router>
+        );
+
+        ReactDOM.render(routes, mountPoint);
     }
 );

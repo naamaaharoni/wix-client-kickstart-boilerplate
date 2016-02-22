@@ -1,15 +1,12 @@
-/**
- * Created by odedg on 22/02/2016.
- */
-define(['react'], function (React) {
+define(['lodash', 'react'], function (_, React) {
     'use strict';
+
     return React.createClass({
-        displayName: 'PageHeader',
         render: function () {
             return (
                 <div>
+                    <img src='./images/site_logo.png'/>
                     <h1>MarkBook</h1>
-                    <img src="img/logo.jpg"/>
                 </div>
             );
         }
