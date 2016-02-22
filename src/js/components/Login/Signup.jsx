@@ -1,4 +1,4 @@
-define(['lodash', 'react', 'reactRoute', 'components/Login/Header', 'components/Login/Error'], function (_, React, ReactRouter, Header, Error) {
+define(['lodash', 'react', 'router', 'components/Login/Header', 'components/Login/Error'], function (_, React, ReactRouter, Header, Error) {
     'use strict';
 
     var History = ReactRouter.History;

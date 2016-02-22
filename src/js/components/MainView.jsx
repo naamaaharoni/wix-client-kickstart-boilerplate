@@ -1,4 +1,4 @@
-define(['lodash', 'React', 'components/Login/Login'], function (_, React, Login) {
+define(['lodash', 'react', 'components/Login/Login'], function (_, React, Login) {
     'use strict';
 
     return React.createClass({

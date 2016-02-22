@@ -1,5 +1,5 @@
-define(['React', 'reactDOM', 'components/component/Component'],
-    function (React, ReactDOM, Component) {
+define(['react', 'reactDOM', 'components/component/Component', 'components/Login/Login'],
+    function (React, ReactDOM, Component, Login) {
         'use strict';
 
         var TestUtils = React.addons.TestUtils;

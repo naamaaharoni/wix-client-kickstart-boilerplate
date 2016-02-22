@@ -1,9 +1,9 @@
 requirejs.config({
     paths: {
         lodash: '../vendor/lodash',
-        React: '../vendor/react',
+        react: '../vendor/react',
         reactDOM: '../vendor/react-dom',
-        reactRoute: 'https://cdnjs.cloudflare.com/ajax/libs/react-router/2.0.0/ReactRouter'
+        router: 'https://cdnjs.cloudflare.com/ajax/libs/react-router/2.0.0/ReactRouter'
     },
     map: {
         '*': {
@@ -21,7 +21,7 @@ requirejs.config({
     }
 });
 
-requirejs(['lodash', 'React', 'reactDom', 'reactRoute', 'components/Login/Login', 'components/Login/Signup'],
+requirejs(['lodash', 'react', 'reactDOM', 'router', 'components/Login/Login', 'components/Login/Signup'],
     function (_, React, ReactDOM, ReactRouter, Login, Signup) {
         'use strict';
 
