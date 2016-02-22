@@ -34,14 +34,5 @@ requirejs.config({
     deps: tests,
 
     // start test run, once Require.js is done
-    callback: window.__karma__.start,
-    shim: {
-        lodash: {
-            exports: '_'
-        },
-        React: {
-            exports: 'React'
-        },
-        reactDom: ['react']
-    }
+    callback: window.__karma__.start
 });
